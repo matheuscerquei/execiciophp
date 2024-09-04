@@ -12,8 +12,8 @@
     <?php
     
     $num1 = $_POST["num1"];
-  $operador = $_POST["operador"];
-  $num2 = $_POST["num2"];
+   $operador = $_POST["operador"];
+   $num2 = $_POST["num2"];
 
   switch ($operador) {
     case '+':
@@ -37,10 +37,21 @@
   }
 
   echo "Resultado: $resultado";
-
-
-    
-    
     ?>
+    <form action="" method="post">
+  <label for="num1">Número 1:</label>
+  <input type="number" id="num1" name="num1"><br><br>
+  <label for="operador">Operador:</label>
+  <select id="operador" name="operador">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select><br><br>
+  <label for="num2">Número 2:</label>
+  <input type="number" id="num2" name="num2"><br><br>
+  <input type="submit" value="Calcular">
+</form>
+
 </body>
 </html>
