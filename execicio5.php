@@ -7,10 +7,10 @@
 </head>
 <body>
 <?php
-// Initialize balance
+
 $balance = 900;
 
-// Display menu
+
 echo "<h1>Tigrinho</h1>";
 echo "<form action='' method='post'>";
 echo "<label for='option'>Select an option:</label>";
@@ -23,17 +23,17 @@ echo "</select>";
 echo "<input type='submit' value='Submit'>";
 echo "</form>";
 
-// Process user input
+
 if (isset($_POST['option'])) {
   $option = $_POST['option'];
 
   switch ($option) {
     case '1':
-      // View Balance
+     
       echo "<p>Seu saldo atual é: R$ $balance</p>";
       break;
     case '2':
-      // Deposit
+      
       echo "<form action='' method='post'>";
       echo "<label for='amount'>Digite o valor a ser depositado:</label>";
       echo "<input type='number' id='amount' name='amount'>";
@@ -47,7 +47,7 @@ if (isset($_POST['option'])) {
       }
       break;
     case '3':
-      // Withdraw
+    
       echo "<form action='' method='post'>";
       echo "<label for='amount'>Digite o valor a ser sacado:</label>";
       echo "<input type='number' id='amount' name='amount'>";
@@ -65,7 +65,7 @@ if (isset($_POST['option'])) {
       }
       break;
     case '4':
-      // Exit
+     
       echo "<p>Até logo!</p>";
       exit;
       break;
