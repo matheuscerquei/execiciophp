@@ -8,7 +8,7 @@
 </head>
 <body>
    
-<form action="verificar_login.php" method="post">
+<form action="" method="post">
     <label for="nomeUsuario">Nome de usuário:</label>
     <input type="text" id="nomeUsuario" name="nomeUsuario"><br><br>
     <label for="senha">Senha:</label>
@@ -17,14 +17,15 @@
 </form>
 
 <?php
-    $nomeUsuario = $_POST["nomeUsuario"]?? null;
+    $nomeUsuario = $_POST["nomeUsuario"] ?? null;
     $senha = $_POST["senha"]?? null;
-
+if($nomeUsuario != null && $senha != null ){
     if($nomeUsuario == "admin" && $senha == "1234"){
         echo "Login bem-sucedido";
     }else{
         echo"Login ou senha incorretos";
     }
+}
     ?>
     
 </body>
