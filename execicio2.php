@@ -15,29 +15,34 @@
     <?php
     $nota = $_POST["nota"];
     
-    if($nota > 0 && $nota < 10){
+    if($nota > 0 && $nota <= 10){
         
     switch($nota){
         case 10:
             $classificacao ="A";
+        
             break;
         case 9:
             $classificacao = "B";
+    
             break;
         case 8:
         case 7:
             $classificacao ="c"; 
+           
             break;
         case 6:
         case 5:
             $classificacao = "d";
+            
         break;
 
         default:
         $classificacao = "f";
+       
         break;                    
     }
-    echo "nota: $nota - Classificacao";
+    echo "nota: $nota - Classificacao $classificacao";
 }else{
     echo "Nota invalida. por favor, insira uma nota entre 0 a 10.";
 }
